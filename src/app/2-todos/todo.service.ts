@@ -15,8 +15,8 @@ export class TodoService {
     return this.http.get<any[]>('...');
   }
 
-  getTodosPromise() {
-    return this.http.get('...').toPromise();
+  getTodosPromise(): Promise<any[]> {
+    return this.http.get<any[]>('...').toPromise();
   }
 
   delete(id) {
